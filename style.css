@@ -41,7 +41,7 @@ h2{
 
 .social-networks{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding-left: 10px;
     width: auto;
@@ -227,19 +227,22 @@ main{
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
+
 .contacts-items__item{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 200px;
+    width: 220px;
     padding: 0 0 20px;
+    margin: 0 10px;
 }
-.contacts-items__item_padding-bottom_10{
+.contacts-items__item_footer{
     padding: 0 0 10px;
 }
 
 .contacts-items__item__link{
-    margin-left: 10px;
+    margin:0 10px;
     color: black;
 }
 .contacts-items__item__link_white{
@@ -263,8 +266,7 @@ footer{
 }
 .footer-decorator{
         border: 1px solid gray;
-        margin-top: 10px;
-        height: 8.1em;
+        margin: 10px;
 }
 
 .some-text,
@@ -304,10 +306,16 @@ a:active {
 }
 
 
-@media screen and (max-width: 320px) {
-    .top{
-        background-size: 50% 500px, 52% 500px, 70em 60em;
-        background-position: 0% 269%, 103% 270%, 50% 9%;
+@media screen and (max-width: 719px) {
+    .header{
+        background-image: url(photo/header_background_1800.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: 100% 0%;
+        height: auto;
+    }
+    .header-top__menu{
+        padding-right: 2%;
     }
     .avatar{
         background-size: contain;
@@ -324,13 +332,12 @@ a:active {
     .left-side,
     .right-side{
         width: 100%;
-        height: 100%;
     }
-    .caption,
+    .left-side__caption,
     .about-me{
         width: 100%;
     }
-    .about-me .my-photo{
+    .about-me__my-photo{
         width: 100%;
         border-radius: 0;
     }
@@ -340,20 +347,13 @@ a:active {
     .title{
         align-self: center;
     }
-    .soft-skills-frontend{
+    .soft-skills{
         justify-content: center;
     }
-    .contacts-on-map{
-        margin-top: 0;
-        width: 100%;
-        height: auto;
+    .contacts{
+        margin: 0;
     }
-    .links{
-        margin: 0 0 10px 20px;
-        justify-content: flex-start;
-    }
-    .footer-top{
-        display: flex;
+    .footer{
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -362,26 +362,45 @@ a:active {
     .contacts{
         width: auto;
     }
+    .site-map__items{
+        justify-content: center;
+    }
     .some-text,
-    .contacts,
     .copyright{
         text-align: center;
     }
-    .site-map ul {
-        justify-content: center;
-        padding-inline-start: 5px;
-    }
-    li{
-        margin: 0 6.7px 10px 0;
-    }
     .footer-decorator{
-        border: 1px solid gray;
         margin: 0 0 0 0.8em;
-        width: 90%;
+        width: 96%;
         height: 0;
     }
-    
-    
+    .social-networks{
+        justify-content: center;
+    }
+    .contacts-items_footer{
+        justify-content: center;
+    }
+    .contacts-items__item_footer{
+        padding: 10px 20px;
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 960px) {
+    .left-side__caption,
+    .about-me {
+        width: 100%;
+    }
+    .left-side{
+        flex-direction: column;
+        align-items: center;
+    }
+    .soft-skills{
+        justify-content: center;
+    }
+    .site-map__items__item {
+        padding-right: 10px;
+    }
 }
 
 
